@@ -1,0 +1,17 @@
+## FOLDERS ####################
+**/dist
+**/node_modules
+**/offline
+
+## FILES ######################
+**/package-lock.json
+**/yarn-lock.json
+**/pnpm-lock.yml
+**/.env
+
+## PRISMA #####################
+**/prisma/migrations
+**/prisma/dev.db
+**/prisma/dev.db-journal
+
+

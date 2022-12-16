@@ -1,0 +1,289 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2022-12-19T14:26:08.070Z",
+  "__export_source": "insomnia.desktop.app:v2022.7.0",
+  "resources": [
+    {
+      "_id": "req_1ca806f2bc3d4a5087251f46fea9b20c",
+      "parentId": "fld_cb2150dda2a2407b9b58f55b4805321b",
+      "modified": 1671375204944,
+      "created": 1671373676183,
+      "url": "{{server}}/notifications/from/{{ _.recipientId }}",
+      "name": "get from recipient",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1671195015166,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_cb2150dda2a2407b9b58f55b4805321b",
+      "parentId": "wrk_2144f7ef9b904e1b969156ecff251d9f",
+      "modified": 1671375198308,
+      "created": 1671375198308,
+      "name": "recipient",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1671375198308,
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_2144f7ef9b904e1b969156ecff251d9f",
+      "parentId": null,
+      "modified": 1671195010422,
+      "created": 1671195010422,
+      "name": "notifications-microservice",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_8043edd7933c40399e010f7deb4fb4ea",
+      "parentId": "fld_cb2150dda2a2407b9b58f55b4805321b",
+      "modified": 1671375202008,
+      "created": 1671373578665,
+      "url": "{{server}}/notifications/count/from/{{ _.recipientId }}",
+      "name": "count from recipient",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1671195015116,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_4792672bda234d2aaf24ad2276f9ade5",
+      "parentId": "fld_e1c37016e1544be38f3541d31299e53e",
+      "modified": 1671375189279,
+      "created": 1671373495832,
+      "url": "{{ _.server }}/notification/{{ _.notification }}/read",
+      "name": "read notification",
+      "description": "",
+      "method": "PATCH",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1671374251982.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_e1c37016e1544be38f3541d31299e53e",
+      "parentId": "wrk_2144f7ef9b904e1b969156ecff251d9f",
+      "modified": 1671375182500,
+      "created": 1671375182500,
+      "name": "notification",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1671375182500,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_cc10db06176641a6a7937c34b3e3cbf1",
+      "parentId": "fld_e1c37016e1544be38f3541d31299e53e",
+      "modified": 1671375190793,
+      "created": 1671373509685,
+      "url": "{{ _.server }}/notification/{{ _.notification }}/unread",
+      "name": "unread notification",
+      "description": "",
+      "method": "PATCH",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1671374251957.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_c96c912ed007434cac446dd7546f8c7d",
+      "parentId": "fld_e1c37016e1544be38f3541d31299e53e",
+      "modified": 1671375187833,
+      "created": 1671373321365,
+      "url": "{{ _.server }}/notification/{{ _.notification }}/cancel",
+      "name": "cancel notification",
+      "description": "",
+      "method": "PATCH",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1671374251932.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_87734a523132438a9ff7630eb8f45b3f",
+      "parentId": "wrk_2144f7ef9b904e1b969156ecff251d9f",
+      "modified": 1671375220813,
+      "created": 1671195090156,
+      "url": "{{ _.server }}/notifications",
+      "name": "create notification",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"recipientId\": \"0b10f4ba-b024-4ae1-b511-ac88e5cc4fea\",\n\t\"content\": \"Hello world\",\n\t\"category\": \"welcome message\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1671285098820.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_299b2a0d99a542ff89adb1792b06906f",
+      "parentId": "wrk_2144f7ef9b904e1b969156ecff251d9f",
+      "modified": 1671375174066,
+      "created": 1671195015141,
+      "url": "{{server}}/notifications",
+      "name": "get all notifications",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1671195015141,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_024393679687628aefdf6b9a1c9eda2cda989dc9",
+      "parentId": "wrk_2144f7ef9b904e1b969156ecff251d9f",
+      "modified": 1671373829486,
+      "created": 1671195010429,
+      "name": "Base Environment",
+      "data": {
+        "notification": "7ff7f5be-f8ce-4224-a813-4e3f507bab50",
+        "recipientId": "0b10f4ba-b024-4ae1-b511-ac88e5cc4fea"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "notification",
+          "recipientId"
+        ]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1671195010429,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_024393679687628aefdf6b9a1c9eda2cda989dc9",
+      "parentId": "wrk_2144f7ef9b904e1b969156ecff251d9f",
+      "modified": 1671195010432,
+      "created": 1671195010432,
+      "name": "Default Jar",
+      "cookies": [],
+      "_type": "cookie_jar"
+    },
+    {
+      "_id": "spc_1bc4176a893143e5b87dd6d6af28217a",
+      "parentId": "wrk_2144f7ef9b904e1b969156ecff251d9f",
+      "modified": 1671195010423,
+      "created": 1671195010423,
+      "fileName": "notifications-microservice",
+      "contents": "",
+      "contentType": "yaml",
+      "_type": "api_spec"
+    },
+    {
+      "_id": "env_39318e11a54b40e38d6c891727cd7a1e",
+      "parentId": "env_024393679687628aefdf6b9a1c9eda2cda989dc9",
+      "modified": 1671373635537,
+      "created": 1671195177499,
+      "name": "production",
+      "data": {
+        "server": "http://localhost:3000"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "server"
+        ]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1671195177499,
+      "_type": "environment"
+    },
+    {
+      "_id": "env_aa303778dac442538455d0ca02398f3c",
+      "parentId": "env_024393679687628aefdf6b9a1c9eda2cda989dc9",
+      "modified": 1671373637539,
+      "created": 1671195184612,
+      "name": "development",
+      "data": {
+        "server": "http://localhost:3000"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "server"
+        ]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1671195184612,
+      "_type": "environment"
+    }
+  ]
+}
